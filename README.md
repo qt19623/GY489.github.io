@@ -1,1 +1,1 @@
-# GY489.github.io
+# gy489.github.io
