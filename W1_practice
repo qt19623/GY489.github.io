@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/Self-Driving-Cities/Cycling-Data/main/newyorkcity_ny/bike_counters/nyc_daily_bike_counts.csv",
+    "format": {"type": "csv"}
+  }, 
+   "transform": [
+    {
+      "filter": {
+        "field": "name",
+        "oneOf": ["Manhattan Bridge Bike Comprehensive"]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 310,
+  "mark": {"type": "line", "point": false},
+
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "name",
+      "type": "nominal",
+      "scale": {"scheme": "set1"},
+      "title": "null",
+      "legend": {"orient": "top-left", "fillColor": "#FcFdFd"}
+    }
+  }
+}
