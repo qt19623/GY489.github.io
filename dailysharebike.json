@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/qt19623/gy489/main/dayonlycnt_202302051103.csv",
+    "format": {"type": "csv"}
+  }, 
+
+  "height": 300,
+  "width": 310,
+  "mark": {"type": "line", "point": false},
+
+  "encoding": {
+    "x": {
+      "field": "dayonly",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "cnt",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    }
+  
+  }
+}
